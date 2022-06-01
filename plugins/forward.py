@@ -19,7 +19,7 @@ OWNER=int(Config.OWNER_ID)
 @Client.on_message(filters.command("status"))
 async def count(bot, m):
     if 1 in status:
-        await m.reply_text("Currently Bot is forwarding messages.")
+        await m.reply_text("Currently Bot is Forwarding.")
     if 2 in status:
         await m.reply_text("Now Bot is Sleeping")
     if 1 not in status and 2 not in status:
