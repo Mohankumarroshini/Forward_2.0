@@ -209,12 +209,12 @@ async def cb_handler(bot: Client, query: CallbackQuery):
             mcount += 1
             new_skip_no=str(skip_no+msg_count)
             print(f"Total Indexed : {msg_count} - Current SKIP_NO: {new_skip_no}")
-            if mcount == 100:
+            if mcount == 100000000:
                 try:
                     datetime_ist = datetime.now(IST)
                     ISTIME = datetime_ist.strftime("%I:%M:%S %p - %d %B %Y")
                     await m.edit(text=f"Total Indexed : <code>{msg_count}</code>\nCurrent skip_no:<code>{new_skip_no}</code>\nLast edited at {ISTIME}")
-                    mcount -= 100
+                    mcount -= 100000000
                 except FloodWait as e:
                     print(f"Floodwait {e.x}")
                     pass
